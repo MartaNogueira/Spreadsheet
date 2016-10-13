@@ -1,18 +1,79 @@
-
 public class Spreadsheet {
 
-	public String get(String cell) {
-		// to be implemented
-		return null;
+	public Spreadsheet() {
+
 	}
-	
-	public void set(String cell, String value) {
+
+	String cellVar = "0";
+
+	public String get() {
 		// to be implemented
+		return cellVar;
+
 	}
-	
-	public String evaluate(String cell) {
+
+	public void set(String value) {
 		// to be implemented
-		return null;
+		cellVar = value;
+
+	}
+
+	public void evaluate(String cell) {
+		// to be implemented
+
+	}
+
+	public String addition(String value1, String value2) {
+
+		int par1 = Integer.parseInt(value1);
+		int par2 = Integer.parseInt(value2);
+
+		int var = par1 + par2;
+
+		String result = String.valueOf(var);
+		return result;
+
+	}
+	public String subtraction(String value1, String value2) {
+
+		int par1 = Integer.parseInt(value1);
+		int par2 = Integer.parseInt(value2);
+
+		int var = par1 - par2;
+
+		String result = String.valueOf(var);
+		return result;
+
+	}
+	public String multiplication(String value1, String value2) {
+		
+		int par1 = Integer.parseInt(value1);
+		int par2 = Integer.parseInt(value2);
+		
+		int var = par1 * par2;
+		
+		String result = String.valueOf(var);
+		return result;
+		
+	}
+	public String divison (String value1, String value2) {
+		if (value2.equals("0")){
+			return  "#Error";
+		}
+		
+		int par1 = Integer.parseInt(value1);
+		int par2 = Integer.parseInt(value2);
+		
+		int var = par1 / par2;
+		
+		String result = String.valueOf(var);
+		return result;
+}
+	public String module (String value){
+		
+		value = value.startsWith("-") ? value.substring(1) : value;
+		
+		return value;
 	}
 	
 }
